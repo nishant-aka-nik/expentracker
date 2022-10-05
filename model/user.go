@@ -1,5 +1,7 @@
 package model
 
 type User struct {
-	EmailId string `json:"emailid" bson:"emailid"`
+	Name    string `json:"name" bson:"name"`
+	Email   string `json:"email" bson:"email"`
+	Picture string `json:"picture" bson:"picture"`
 }

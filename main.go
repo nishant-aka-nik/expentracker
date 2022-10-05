@@ -9,6 +9,8 @@ import (
 func main() {
 	router := gin.Default()
 	router.LoadHTMLGlob("templates/*")
-	router.GET("/", handler.Login)
-	router.Run()
+	router.GET("/", handler.Index)
+	router.POST("/login", handler.Login)
+
+	router.Run(":5555")
 }
