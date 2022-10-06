@@ -10,7 +10,7 @@ func main() {
 	router := gin.Default()
 	router.LoadHTMLGlob("templates/*")
 	router.GET("/", handler.Index)
-	router.POST("/login", handler.Login)
+	router.POST("/dashboard", handler.Dashboard)
 
 	router.Run(":5555")
 }

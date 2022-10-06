@@ -15,8 +15,8 @@ func Index(c *gin.Context) {
 	c.HTML(http.StatusOK, "index.html", nil)
 }
 
-func Login(c *gin.Context) {
-	var userData model.User
+func Dashboard(c *gin.Context) {
+	var userData model.TokenUser
 	authToken := c.Request.Header.Get("Authorization")
 
 	responseBody, err := getBody(tokeninfo + authToken)
